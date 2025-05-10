@@ -2,8 +2,8 @@
 
 Start by cloning the repo:
 ```bash
-git clone --recursive git@github.com:evelynturri/repo.git
-cd repo
+git clone https://github.com/evelynturri/pv-ai-detector.git
+cd pv-ai-detector
 ```
 
 ## Virtual Environment
@@ -14,15 +14,15 @@ We tested the code on linux with CUDA 12.1 and PyTorch 2.3.1, but it should work
 ### venv
 
 ```bash
-python -m venv ai-pv-failure
-source ai-pv-failure/bin/activate
+python -m venv ai-pv
+source ai-pv/bin/activate
 ```
 ### anaconda
 
 You can create an anaconda environment called `repo` as below.
 ```bash
-conda create -n ai-pv-failure python=3.10.8
-conda activate ai-pv-failure
+conda create -n ai-pv python=3.10.8
+conda activate ai-pv
 ```
 
 ## Installation
