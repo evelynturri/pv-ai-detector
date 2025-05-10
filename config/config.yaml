@@ -1,0 +1,40 @@
+general: 
+  seed: 5678
+  task: binary-classification # task in [binary-classification, multi-classification, multi-classification-reduction, multi-classification-reduction1]
+  num_classes: 2 # binary-classification : num_classes=2, multi-classification : num_classes=11, multi-classification-reduction : num_classes=7, multi-classification-reduction : num_classes=5
+
+wandb:
+  wandb: False
+  wandb_api_key: 
+  project_name: pv-failure-detection-resnet-vs-gpt4o
+  experiment_name: 
+  message:
+  tag: train # choose between [train, eval]
+  mode: online
+
+dataset:
+  dataset_path: 'dataset/InfraredSolarModules'
+  dataset_json: 'dataset/InfraredSolarModules/module_metadata.json'
+  dataset_learning_map: 'config/dataset_learning_map.yaml'
+  path_statistics: 'materials/statistics'
+  split: train # split in [train, test]
+  color: False
+  aug: False
+
+models:
+  model: resnet 
+  resnet: resnet18 # choose between resnet18, resnet50, resnet101
+  gpt_api_key: 
+  checkpoint: 
+  
+train:
+  batch_size_train: 1024
+  batch_size_val: 512
+  lr: 0.01 # bin: 0.001
+  weight_decay: 0.0005 # bin: 0.01
+  epochs: 100
+
+OpenAI:
+  personal_key: True
+  key: 
+
